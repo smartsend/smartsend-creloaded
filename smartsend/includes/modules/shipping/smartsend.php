@@ -48,18 +48,16 @@
             # POST PARAMETER VALUES
 
             $post_param_values["METHOD"]                = "GetQuote";
-            $post_param_values["FROMCOUNTRYCODE"]       = "AU";
-            $post_param_values["FROMPOSTCODE"]          = "2000";
-            $post_param_values["FROMSUBURB"]            = "SYDNEY";
+            $post_param_values["FROMCOUNTRYCODE"]       = MODULE_SHIPPING_SMARTSEND_COUNTRYCODE;
+            $post_param_values["FROMPOSTCODE"]          = MODULE_SHIPPING_SMARTSEND_POSTCODE;
+            $post_param_values["FROMSUBURB"]            = MODULE_SHIPPING_SMARTSEND_SUBURB;
             $post_param_values["TOCOUNTRYCODE"]         = $tocountrycode;
             $post_param_values["TOPOSTCODE"]            = $topostcode;
             $post_param_values["TOSUBURB"]              = $tosuburb;
             $post_param_values["RECEIPTEDDELIVERY"]     = MODULE_SHIPPING_SMARTSEND_RECEIPTEDDELIVERY;
             $post_param_values["TRANSPORTASSURANCE"]    = $order->info["total"];
             
-            
-
-            # tail lift - init    
+ 			# tail lift - init    
             $taillift = array();
             $has_valid_products_info = true;
 			
